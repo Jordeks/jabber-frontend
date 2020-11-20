@@ -1,10 +1,26 @@
 .header {
     height: 90vh;
     background-image: linear-gradient(to right bottom, 
-                                    rgba($color-primary, 0.7), 
-                                    rgba($color-primary-dark, 0.7)), 
+                                    rgba($color-primary, 0.8), 
+                                    rgba($color-primary-dark, 0.8)), 
                                     url(./img/hero.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+    }
+
+    &__btn {
+        position: absolute; 
+        top: 80%;
+        right: 10%
+    }
+
 }
+

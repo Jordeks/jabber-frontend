@@ -1,12 +1,16 @@
+import MessageContainer from './containers/MessageContainer'
+import Home from './components/Home'
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <header className="header">
-      <div className='header__text-box'>
-        <span className='heading-primary--main'>Jabber</span>
-        <span className='heading-primary--sub'>Meet new friends around the world</span>
-      </div>
-    </header>
+    <>
+      <Router>
+        <Home />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/messages" component={MessageContainer} />
+      </Router>
+    </>
   );
 }
 
