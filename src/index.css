@@ -62,7 +62,8 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem; }
+  padding: 3rem;
+  text-align: center; }
 
 body {
   font-family: 'Rubik', sans-serif;
@@ -89,6 +90,23 @@ body {
     letter-spacing: .5rem;
     animation: slideInBlurredRight 1.2s ease-out; }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: lowercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #449c75, #3b5453);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition-property: all, .2s;
+  letter-spacing: .2rem; }
+  .heading-secondary:hover {
+    transform: skewY(1deg) skewX(3deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(14, 17, 17, 0.2); }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -108,7 +126,7 @@ body {
   margin-bottom: 10rem !important; }
 
 .btn {
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   border: none;
   padding: 1rem 1.5rem;
   background-color: #815F6B;
@@ -119,12 +137,26 @@ body {
   font-size: 2rem; }
   .btn:hover {
     background-color: #B1959F;
-    color: #ebebeb;
+    color: #333;
     box-shadow: 0 1rem 2rem rgba(14, 17, 17, 0.4);
     transform: translateY(-2px); }
   .btn:active {
     box-shadow: 0 1rem 1rem rgba(14, 17, 17, 0.25);
     transform: translateY(0); }
+
+.message-list__box {
+  background-image: url(./img/so-white.png);
+  color: #0e1111;
+  position: absolute;
+  top: 15%;
+  height: 50vh;
+  width: 90vw;
+  border: 2px solid #333; }
+  .message-list__box ul {
+    list-style: none; }
+  .message-list__box li {
+    text-align: left;
+    margin-left: 1rem; }
 
 .header {
   height: 90vh;
@@ -142,3 +174,8 @@ body {
     position: absolute;
     top: 80%;
     right: 10%; }
+
+.messanger {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  position: relative; }

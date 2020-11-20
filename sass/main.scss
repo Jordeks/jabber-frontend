@@ -1,4 +1,4 @@
-
+@import 'abstracts/mixins'; 
 @import 'abstracts/variables';
 
 @import 'base/animations'; 
@@ -7,7 +7,13 @@
 @import 'base/utilities';
 
 @import 'components/button';
+@import 'components/message_list';
 
 @import 'layout/header';
+
+@import 'pages/home';
+@import 'pages/messanger';
+
+
 
 

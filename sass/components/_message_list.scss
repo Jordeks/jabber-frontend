@@ -1,0 +1,22 @@
+.message-list{
+    
+
+    &__box{
+        background-image: url(./img/so-white.png);
+        color: $color-black;
+        position: absolute;
+        top: 15%;
+        height: 50vh;
+        width: 90vw; 
+        border: 2px solid $color-gray-dark-2;
+        
+        ul {
+            list-style: none; 
+        }
+
+        li {
+            text-align: left;
+            margin-left: 1rem; 
+        }
+    }
+}

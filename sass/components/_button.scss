@@ -1,5 +1,5 @@
 .btn {
-    border-radius: 1.5rem;
+    border-radius: 2rem;
     border: none;
     padding: 1rem 1.5rem;
     background-color: $color-tertiary-dark;
@@ -11,7 +11,7 @@
 
     &:hover {
         background-color: $color-tertiary;
-        color: $color-white;
+        color: $color-gray-dark-2;
         box-shadow: 0 1rem 2rem rgba($color-black, .40);
         transform: translateY(-2px);
        }
