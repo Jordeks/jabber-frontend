@@ -20,4 +20,9 @@
         box-shadow: 0 1rem 1rem rgba($color-black, 0.25);
         transform: translateY(0);
        }
+
+    &--small {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+    }
 }

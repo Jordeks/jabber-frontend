@@ -1,0 +1,54 @@
+.form-container
+
+.form {
+    background-image: linear-gradient(to right bottom, rgba($color-primary-dark, 0.7), rgba($color-primary, 0.7));
+    padding: 6rem; 
+    height: auto;
+    width: 89vw;
+    position: absolute; 
+    left: 5%;
+    color: $color-gray-dark-2;
+
+    &__group:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+
+    &__input {
+        font-size: 1.5rem; 
+        font-family: inherit;
+        color: inherit; 
+        padding: .5rem 1rem; 
+        border-radius: 2px;
+        background-color: rgba($color-white, .9); 
+        border: none; 
+        border-bottom: 3px solid transparent;
+        width: 100%; 
+        display: block;
+  }
+
+    &__input:focus {
+        outline: none; 
+        box-shadow: 0 1rem 2rem rgba(33, 33, 33, 0.25);
+        border-bottom: 3px solid $color-tertiary; 
+    }
+
+    &__input:focus:invalid {
+        border-bottom: 3px solid $color-tertiary-dark; 
+    }
+
+    &__label {
+        font-size: 1.2rem; 
+        color: $color-tertiary-dark;
+        font-weight: 700;
+        margin-top: .7rem;
+        display: block;
+        transition: all, .3s;
+      }
+    
+      &__input:placeholder-shown + &__label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+      }
+}

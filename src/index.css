@@ -98,7 +98,7 @@ body {
   display: inline-block;
   position: absolute;
   top: 0;
-  left: 35%;
+  left: 40%;
   -webkit-background-clip: text;
   color: transparent;
   transition-property: all, .2s;
@@ -143,15 +143,64 @@ body {
   .btn:active {
     box-shadow: 0 1rem 1rem rgba(14, 17, 17, 0.25);
     transform: translateY(0); }
+  .btn--small {
+    padding: .5rem 1rem;
+    font-size: 1rem; }
+
+.form-container
+.form {
+  background-image: linear-gradient(to right bottom, rgba(59, 84, 83, 0.7), rgba(68, 156, 117, 0.7));
+  padding: 6rem;
+  height: auto;
+  width: 89vw;
+  position: absolute;
+  left: 5%;
+  color: #333; }
+  .form-container
+.form__group:not(:last-child) {
+    margin-bottom: 1rem; }
+  .form-container
+.form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: .5rem 1rem;
+    border-radius: 2px;
+    background-color: rgba(235, 235, 235, 0.9);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    display: block; }
+  .form-container
+.form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(33, 33, 33, 0.25);
+    border-bottom: 3px solid #B1959F; }
+  .form-container
+.form__input:focus:invalid {
+    border-bottom: 3px solid #815F6B; }
+  .form-container
+.form__label {
+    font-size: 1.2rem;
+    color: #815F6B;
+    font-weight: 700;
+    margin-top: .7rem;
+    display: block;
+    transition: all, .3s; }
+  .form-container
+.form__input:placeholder-shown + .form-container
+.form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
 
 .message-list__box {
   background-image: url(./img/so-white.png);
   color: #0e1111;
-  position: absolute;
-  top: 15%;
-  height: 50vh;
-  width: 90vw;
-  border: 2px solid #333; }
+  height: 50rem;
+  width: auto;
+  border: 2px solid #333;
+  margin: 2rem; }
   .message-list__box ul {
     list-style: none; }
   .message-list__box li {
@@ -177,5 +226,4 @@ body {
 
 .messanger {
   background-color: #f7f7f7;
-  padding: 25rem 0;
-  position: relative; }
+  padding-top: 5rem; }

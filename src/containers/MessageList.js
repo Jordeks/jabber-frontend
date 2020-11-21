@@ -7,13 +7,13 @@ function MessageList(props){
         return (
             <>
                 <h2 className='heading-secondary'> Latest Jabber</h2> 
-                <div className='message-list'> 
-                <div className='message-list__box'>
-                    <ul>
-                        {props.messages.map(message => <Message content={message.content} username={message.username} key={message.id}/>)}
-                    </ul>
-                </div>
-                </div>
+                    <div className='message-list'> 
+                        <div className='message-list__box'>
+                            <ul>
+                                {props.messages.map(message => <Message content={message.content} username={message.username} key={message.id}/>)}
+                            </ul>
+                        </div>
+                    </div>
             </>
         )
     

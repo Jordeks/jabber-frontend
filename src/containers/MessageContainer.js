@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MessageList from './MessageList'
+import MessageForm from '../components/MessageForm'
 
 export default class MessageContainer extends Component {
 
@@ -28,6 +29,7 @@ export default class MessageContainer extends Component {
         return (
             <div className='messanger'>
                 <MessageList messages={this.state.messages} />
+                <MessageForm />
             </div>
         )
     }
