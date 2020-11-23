@@ -1,4 +1,7 @@
-import { GET_MESSAGES } from '../actionTypes' 
+import { 
+  GET_MESSAGES,
+  ADD_MESSAGE
+} from '../actionTypes' 
 
 
 export function getMessages() {

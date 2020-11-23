@@ -1,5 +1,6 @@
 import {
-  GET_MESSAGES
+  GET_MESSAGES,
+  ADD_MESSAGE
 } from '../actionTypes'
 
 const initialState = []
