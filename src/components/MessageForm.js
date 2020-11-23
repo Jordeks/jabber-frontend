@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
 
-export default class MessageForm extends Component {
+import { connect } from 'react-redux'
+import { addMessage } from '../actions/messages'
+
+class MessageForm extends Component {
 
     state = {
         username: '',
-        message: ''
+        content: ''
     }
 
     handleChange = e => {
@@ -13,11 +16,12 @@ export default class MessageForm extends Component {
     }
 
     handleSubmit = e => {
-        e.preventDault()
-        this.props.addMessage()
+        e.preventDefault()
+        this.props.addMessage(this.state)
+        // console.log(this.state)
         this.setState({
             username: '',
-            text: ''
+            content: ''
         })
     }
 
@@ -34,7 +38,7 @@ export default class MessageForm extends Component {
             <div className='form__group'>
                 <label className='form__label'>
                     Message:
-                    <input className='form__input' type="text" name="message" value={this.state.message} onChange={this.handleChange}/>
+                    <input className='form__input' type="text" name="content" value={this.state.content} onChange={this.handleChange}/>
                 </label><br/>
             </div>
             <button className='btn btn--small' type="submit" value="Submit"> Send Message</button>
@@ -44,3 +48,5 @@ export default class MessageForm extends Component {
   }
 
 }
+
+export default connect(null, { addMessage })(MessageForm)

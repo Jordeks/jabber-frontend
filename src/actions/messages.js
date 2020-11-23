@@ -14,3 +14,10 @@ export function getMessages() {
     }))
   }
 }
+
+export function addMessage(messageObj) {
+  return {
+    type: ADD_MESSAGE,
+    message: messageObj
+  }
+}
