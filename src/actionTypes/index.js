@@ -1,0 +1,5 @@
+const GET_MESSAGES = "GET_MESSAGES"
+
+export {
+  GET_MESSAGES
+}
