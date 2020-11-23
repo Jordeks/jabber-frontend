@@ -17,7 +17,7 @@ export function getMessages() {
 
 export function addMessage(messageObj) {
   return (dispatch) => {
-    fetch('http://localhost3000/messages', {
+    fetch('http://localhost:3000/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -25,15 +25,12 @@ export function addMessage(messageObj) {
       body: JSON.stringify(messageObj),
     })
     .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
-    })
+    .then(messageObj => dispatch({
+      type: ADD_MESSAGE,
+      message: messageObj
+    }))
     .catch((error) => {
       console.error('Error:', error);
     });
   }
-  // return {
-  //   type: ADD_MESSAGE,
-  //   message: messageObj
-  // }
 }
