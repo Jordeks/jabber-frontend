@@ -1,36 +1,29 @@
 import React, { Component } from 'react'
 import MessageList from './MessageList'
 import MessageForm from '../components/MessageForm'
+import { getMessages } from '../actions/messages'
+import { connect } from 'react-redux'
 
-export default class MessageContainer extends Component {
+class MessageContainer extends Component {
 
-    state = {
-        messages: [
-           {
-            id: 1,
-            username: "jordles113", 
-            content: 'WE CHATTIN'
-           }, 
-
-           {
-            id: 2,
-            username: "jordy", 
-            content: 'Look at us chat'
-           },
-
-           {
-            id: 3,
-            username: "JoRo", 
-            content: 'yes, we fictional folks are amazing chatters'
-           } 
-        ]
+    componentDidMount(){
+        this.props.getMessages()
     }
+
     render() {
         return (
             <div className='messanger'>
-                <MessageList messages={this.state.messages} />
+                <MessageList messages={this.props.messages} />
                 <MessageForm />
             </div>
         )
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        messages: state.messages
+    }
+}
+
+export default connect(mapStateToProps, { getMessages })(MessageContainer)

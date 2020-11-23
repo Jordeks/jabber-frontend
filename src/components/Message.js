@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
-import { getMessages } from '../actions/messages'
-import { connect } from 'react-redux'
 
-class Message extends Component {
-
-    componentDidMount(){
-        this.props.getMessages()
-    }
+export default class Message extends Component {
+ 
     render() {
         return (
             <li>
@@ -15,5 +10,3 @@ class Message extends Component {
         )
     }
 }
-
-export default connect(null, { getMessages })(Message)

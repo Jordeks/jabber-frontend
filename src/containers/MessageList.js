@@ -2,7 +2,7 @@ import React from 'react'
 import Message from '../components/Message'
 
 function MessageList(props){
-    console.log(props)
+    // console.log(props)
     
         return (
             <>
