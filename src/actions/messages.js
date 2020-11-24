@@ -4,7 +4,7 @@ import {
   DELETE_MESSAGE
 } from '../actionTypes' 
 
-const URL = 'http://localhost:3000/messages'
+const URL = 'http://localhost:3000/api/v1/messages'
 
 export function getMessages() {
   return (dispatch) => {
