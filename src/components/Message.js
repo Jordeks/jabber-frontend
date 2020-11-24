@@ -12,6 +12,7 @@ class Message extends Component {
         return (
             <li>
                 <span><strong>{this.props.username}</strong>: {this.props.content}</span>
+                <span><a href="#popup">Edit</a></span>
                 <span><button className='btn btn--delete' onClick={this.onClick}>&times;</button></span>
             </li>
         )

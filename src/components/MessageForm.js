@@ -27,23 +27,28 @@ class MessageForm extends Component {
 
   render(){
     return(
-    <div className='form-container'>
-        <form className='form' onSubmit={this.handleSubmit}>
-            <div className='form__group'>
-                <label className='form__label'>
-                    Username:
-                    <input className='form__input' type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-                </label><br/>
+     <>   
+        <div className='popup' id="popup">
+        <a href="#messanger" class="popup__close">&times;</a>
+            <div className='form-container'>
+                <form className='form' onSubmit={this.handleSubmit}>
+                    <div className='form__group'>
+                        <label className='form__label'>
+                            Username:
+                            <input className='form__input' type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+                        </label><br/>
+                    </div>
+                    <div className='form__group'>
+                        <label className='form__label'>
+                            Message:
+                            <input className='form__input' type="text" name="content" value={this.state.content} onChange={this.handleChange}/>
+                        </label><br/>
+                    </div>
+                    <button className='btn btn--small' type="submit" value="Submit"> Send Message</button>
+                </form>
             </div>
-            <div className='form__group'>
-                <label className='form__label'>
-                    Message:
-                    <input className='form__input' type="text" name="content" value={this.state.content} onChange={this.handleChange}/>
-                </label><br/>
-            </div>
-            <button className='btn btn--small' type="submit" value="Submit"> Send Message</button>
-        </form>
-    </div>
+        </div>
+    </>
     )
   }
 
