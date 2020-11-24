@@ -6,7 +6,9 @@ function MessageList(props){
     
         return (
             <>
-                <h2 className='heading-secondary'> Latest Jabber</h2> 
+                <div className='messanger__header'>
+                    <h2 className='heading-secondary'> Latest Jabber</h2> 
+                </div>
                     <div className='message-list'> 
                         <div className='message-list__box'>
                             <ul>

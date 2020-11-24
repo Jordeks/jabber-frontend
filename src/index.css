@@ -95,10 +95,7 @@ body {
   text-transform: lowercase;
   font-weight: 700;
   background-image: linear-gradient(to right, #449c75, #3b5453);
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 40%;
+  justify-content: center;
   -webkit-background-clip: text;
   color: transparent;
   transition-property: all, .2s;
@@ -125,6 +122,9 @@ body {
 .u-margin-top-huge {
   margin-bottom: 10rem !important; }
 
+.u-float-left {
+  float: left; }
+
 .btn {
   border-radius: 2rem;
   border: none;
@@ -146,6 +146,10 @@ body {
   .btn--small {
     padding: .5rem 1rem;
     font-size: 1rem; }
+  .btn--delete {
+    font-size: 1.25rem;
+    padding: .25rem .75rem;
+    margin-left: 1rem; }
 
 .form-container
 .form {
@@ -227,3 +231,7 @@ body {
 .messanger {
   background-color: #f7f7f7;
   padding-top: 5rem; }
+  .messanger__header {
+    display: flex;
+    justify-content: center;
+    align-content: center; }

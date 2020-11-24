@@ -1,4 +1,11 @@
 .messanger {
     background-color: $color-gray-light-1; 
     padding-top: 5rem; 
+    
+
+    &__header {
+        display: flex; 
+        justify-content: center;
+        align-content: center; 
+    }
 }

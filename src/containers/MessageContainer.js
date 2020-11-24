@@ -16,11 +16,13 @@ class MessageContainer extends Component {
 
     render() {
         return (
-            <div className='messanger'>
-                <button class='btn' onClick={this.onClick}>Home</button>
-                <MessageList messages={this.props.messages} />
-                <MessageForm />
-            </div>
+            <>
+                <button class='btn btn--small u-float-left' onClick={this.onClick}>Home</button>
+                <div className='messanger'>
+                    <MessageList messages={this.props.messages} />
+                    <MessageForm />
+                </div>
+            </>
         )
     }
 }

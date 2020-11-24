@@ -36,11 +36,11 @@ body {
     font-size: 3.5rem;
     text-transform: lowercase;
     font-weight: 700;
-    background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
-    display: inline-block; 
-    position: absolute;
-    top: 0; 
-    left: 40%; 
+    background-image: linear-gradient(to right, $color-primary, $color-primary-dark); 
+    justify-content: center;
+    // position: absolute;
+    // top: 0; 
+    // left: 40%; 
     -webkit-background-clip: text;
     color: transparent; 
     transition-property: all, .2s;
