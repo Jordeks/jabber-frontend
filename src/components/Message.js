@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { deleteMessage } from '../actions/messages'
 
-export default class Message extends Component {
+class Message extends Component {
+
+    onClick = () => {
+        this.props.deleteMessage(this.props.id)
+    }
  
     render() {
         return (
             <li>
-                <strong>{this.props.username}</strong>: {this.props.content}
+                <span><strong>{this.props.username}</strong>: {this.props.content}</span>
+                <span><button onClick={this.onClick}>&times;</button></span>
             </li>
         )
     }
 }
+
+export default connect(null, { deleteMessage })(Message)

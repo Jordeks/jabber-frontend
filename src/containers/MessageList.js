@@ -10,7 +10,7 @@ function MessageList(props){
                     <div className='message-list'> 
                         <div className='message-list__box'>
                             <ul>
-                                {props.messages.map(message => <Message content={message.content} username={message.username} key={message.id}/>)}
+                                {props.messages.map(message => <Message content={message.content} username={message.username} id={message.id} key={message.id}/>)}
                             </ul>
                         </div>
                     </div>

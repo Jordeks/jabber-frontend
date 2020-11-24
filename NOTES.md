@@ -5,6 +5,7 @@ FRONTEND
 [] edit a message
 [] delete a message
 [] use auth to have a current_user
+[] make message form sticky bottom 
 
 
 BACKEND
