@@ -13,7 +13,7 @@ export function messagesReducer(state = initialState, action) {
     case ADD_MESSAGE:
       return [...state, action.message]
     case DELETE_MESSAGE: 
-      return state.messages.filter(message => message.id !== action.messageId)
+      return state.filter(message => message.id !== action.messageId)
     default:
       return state
 

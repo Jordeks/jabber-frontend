@@ -43,10 +43,9 @@ export function deleteMessage(messageId) {
       method: 'DELETE',
     })
     .then(resp => resp.json())
-    .then(console.log)
-    // .then(messages => dispatch({
-    //   type: DELETE_MESSAGE,
-    //   messageId
-    // }))
+    .then(() => dispatch({
+      type: DELETE_MESSAGE,
+      messageId
+    }))
   }
 }
