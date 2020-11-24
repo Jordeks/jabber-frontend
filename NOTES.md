@@ -1,7 +1,8 @@
 FRONTEND
-[] import svg icons for edit and delete
+[X] import svg icons for edit and delete
+[] use svg icon in home button
 [X] change URL in actions so that it is a CONST
-[] back button to home
+[X] back button to home
 [] edit a message
 [X] delete a message
 [] use auth to have a current_user
