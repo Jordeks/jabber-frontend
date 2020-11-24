@@ -1,6 +1,6 @@
 FRONTEND
 [X] import svg icons for edit and delete
-[] use svg icon in home button
+[X] use svg icon in home button
 [X] change URL in actions so that it is a CONST
 [X] back button to home
 [] edit a message

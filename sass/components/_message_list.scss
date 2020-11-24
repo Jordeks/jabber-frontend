@@ -7,14 +7,14 @@
         width: auto; 
         border: 2px solid $color-gray-dark-2;
         margin: 2rem; 
-        
-        ul {
-            list-style: none; 
-        }
+    }
 
-        li {
-            text-align: left;
-            margin-left: 1rem; 
-        }
+    &__ul {
+        list-style: none; 
+    }
+
+    &__li {
+        text-align: left;
+        margin-left: 1rem; 
     }
 }

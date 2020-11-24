@@ -11,7 +11,7 @@ function MessageList(props){
                 </div>
                     <div className='message-list'> 
                         <div className='message-list__box'>
-                            <ul>
+                            <ul className='message-list__ul'>
                                 {props.messages.map(message => <Message content={message.content} username={message.username} id={message.id} key={message.id}/>)}
                             </ul>
                         </div>

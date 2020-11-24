@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { deleteMessage } from '../actions/messages'
+import sprite from '../img/sprite.svg'
 
 class Message extends Component {
 
@@ -10,10 +11,14 @@ class Message extends Component {
  
     render() {
         return (
-            <li>
-                <span><strong>{this.props.username}</strong>: {this.props.content}</span>
+            <li className='message-list__li'>
+                <span>{this.props.username}:</span> <span>{this.props.content}</span>
                 <span><a href="#popup">Edit</a></span>
-                <span><button className='btn btn--delete' onClick={this.onClick}>&times;</button></span>
+                <span><button className='btn btn--delete' onClick={this.onClick}>
+                    <svg className="icon--trash">
+                            <use href={sprite + '#icon-trash'} />
+                    </svg>
+                </button></span>
             </li>
         )
     }

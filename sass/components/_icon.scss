@@ -8,4 +8,10 @@
         width: 3rem;
         fill: $color-primary; 
     }
+
+    &--trash {
+        height: .90rem;
+        width: .90rem; 
+        fill: $color-white; 
+    }
 }

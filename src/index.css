@@ -212,6 +212,10 @@ body {
     height: 3rem;
     width: 3rem;
     fill: #449c75; }
+  .icon--trash {
+    height: .90rem;
+    width: .90rem;
+    fill: #ebebeb; }
 
 .message-list__box {
   background-image: url(./img/so-white.png);
@@ -220,11 +224,13 @@ body {
   width: auto;
   border: 2px solid #333;
   margin: 2rem; }
-  .message-list__box ul {
-    list-style: none; }
-  .message-list__box li {
-    text-align: left;
-    margin-left: 1rem; }
+
+.message-list__ul {
+  list-style: none; }
+
+.message-list__li {
+  text-align: left;
+  margin-left: 1rem; }
 
 .popup {
   height: 100vh;
