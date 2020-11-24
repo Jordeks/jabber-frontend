@@ -9,7 +9,7 @@ function App() {
   return (
     <div className='App'>
       <Router>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Home} history={history}/>
         <Route exact path="/messages" component={MessageContainer} history={history} />
       </Router>
     </div>

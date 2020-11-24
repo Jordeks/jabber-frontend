@@ -14,4 +14,4 @@ BACKEND
 [] edit a message
 [X] delete a message
 [] add auth
-[] change controllers and routes to /api/v1
+[X] change controllers and routes to /api/v1

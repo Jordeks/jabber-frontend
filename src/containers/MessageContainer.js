@@ -10,9 +10,14 @@ class MessageContainer extends Component {
         this.props.getMessages()
     }
 
+    onClick = () => {
+        this.props.history.push('/')
+    }
+
     render() {
         return (
             <div className='messanger'>
+                <button class='btn' onClick={this.onClick}>Home</button>
                 <MessageList messages={this.props.messages} />
                 <MessageForm />
             </div>
