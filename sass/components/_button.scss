@@ -32,5 +32,15 @@
         margin-left: 1rem;
     }
 
+    &--icon {
+        background-color: transparent;
+
+        &:hover {
+            background-color: $color-gray-light-2;
+            box-shadow: 0 1rem 2rem rgba($color-black, .40);
+            transform: translateY(-2px);
+        }
+    }
+
     
 }

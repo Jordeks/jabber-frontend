@@ -3,6 +3,7 @@ import MessageList from './MessageList'
 import MessageForm from '../components/MessageForm'
 import { getMessages } from '../actions/messages'
 import { connect } from 'react-redux'
+import sprite from '../img/sprite.svg'
 
 class MessageContainer extends Component {
 
@@ -17,7 +18,11 @@ class MessageContainer extends Component {
     render() {
         return (
             <>
-                <button class='btn btn--small u-float-left' onClick={this.onClick}>Home</button>
+                <button class='btn btn--icon u-float-left' onClick={this.onClick}>
+                    <svg className="icon--home">
+                        <use href={sprite + '#icon-home'} />
+                    </svg>
+                </button>
                 <div className='messanger'>
                     <MessageList messages={this.props.messages} />
                     <MessageForm />

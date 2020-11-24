@@ -1,0 +1,11 @@
+.icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: $color-primary;
+
+    &--home {
+        height: 3rem;
+        width: 3rem;
+        fill: $color-primary; 
+    }
+}
