@@ -217,6 +217,12 @@ body {
     width: .90rem;
     fill: #ebebeb; }
 
+.message {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem; }
+  .message__username {
+    font-weight: 600; }
+
 .message-list__box {
   background-image: url(./img/so-white.png);
   color: #0e1111;
