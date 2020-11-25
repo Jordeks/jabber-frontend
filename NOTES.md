@@ -3,8 +3,10 @@ FRONTEND
 [X] use svg icon in home button, delete, and edit btn 
 [X] change URL in actions so that it is a CONST
 [X] back button to home
-[] edit a message
+[X] edit a message
 [X] delete a message
+[X] handle displaying errors in create action creator
+[] handle displaying errors in edit action creator
 [] use auth to have a current_user
 [] make message form sticky bottom 
 [] use React library (moments? -- no Luxon? idk) for date formatting
@@ -12,9 +14,9 @@ FRONTEND
 
 
 BACKEND
-[] and conditional to message create action for if fail to save
-[] which means we need to add some validations
-[] edit a message
+[X] and conditional to message create action for if fail to save
+[X] which means we need to add some validations
+[X] edit a message
 [X] delete a message
 [] add auth
 [X] change controllers and routes to /api/v1

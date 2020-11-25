@@ -28,10 +28,16 @@ export function addMessage(messageObj) {
       body: JSON.stringify(messageObj),
     })
     .then(response => response.json())
-    .then(messageObj => dispatch({
-      type: ADD_MESSAGE,
-      message: messageObj
-    }))
+    .then(message => {
+      if (message.error) {
+        alert(message.error)
+      } else {
+        dispatch({
+          type: ADD_MESSAGE, 
+          message
+        })
+      }
+    })
     .catch((error) => {
       console.error('Error:', error);
     });
