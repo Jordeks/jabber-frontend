@@ -1,6 +1,7 @@
 import { 
   GET_MESSAGES,
   ADD_MESSAGE,
+  EDIT_MESSAGE,
   DELETE_MESSAGE
 } from '../actionTypes' 
 
@@ -29,6 +30,26 @@ export function addMessage(messageObj) {
     .then(response => response.json())
     .then(messageObj => dispatch({
       type: ADD_MESSAGE,
+      message: messageObj
+    }))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }
+}
+
+export function editMessage(messageObj) {
+  return (dispatch) => {
+    fetch(`${URL}/${messageObj.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(messageObj),
+    })
+    .then(response => response.json())
+    .then(messageObj => dispatch({
+      type: EDIT_MESSAGE,
       message: messageObj
     }))
     .catch((error) => {
