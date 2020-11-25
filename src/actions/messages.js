@@ -48,14 +48,13 @@ export function editMessage(messageObj) {
       body: JSON.stringify(messageObj),
     })
     .then(response => response.json())
-    .then(console.log)
-    // .then(messageObj => dispatch({
-    //   type: EDIT_MESSAGE,
-    //   message: messageObj
-    // }))
-    // .catch((error) => {
-    //   console.error('Error:', error);
-    // });
+    .then(messageObj => dispatch({
+      type: EDIT_MESSAGE,
+      message: messageObj
+    }))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   }
 }
 
