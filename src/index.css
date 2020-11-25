@@ -204,6 +204,11 @@ body {
     visibility: hidden;
     transform: translateY(-4rem); }
 
+a:link {
+  text-decoration: none;
+  float: right;
+  margin-right: 2rem; }
+
 .icon {
   height: 2.25rem;
   width: 2.25rem;
@@ -215,7 +220,11 @@ body {
   .icon--trash {
     height: .90rem;
     width: .90rem;
-    fill: #ebebeb; }
+    fill: #449c75; }
+  .icon--edit {
+    height: .90rem;
+    width: .90rem;
+    fill: #449c75; }
 
 .message {
   font-size: 1.25rem;
@@ -226,7 +235,9 @@ body {
 .message-list__box {
   background-image: url(./img/so-white.png);
   color: #0e1111;
-  height: 50rem;
+  max-height: 70vh;
+  overflow: scroll;
+  overflow-x: hidden;
   width: auto;
   border: 2px solid #333;
   margin: 2rem; }
@@ -237,6 +248,8 @@ body {
 .message-list__li {
   text-align: left;
   margin-left: 1rem; }
+  .message-list__li:last-child {
+    margin-bottom: 7rem; }
 
 .popup {
   height: 100vh;
@@ -331,8 +344,8 @@ body {
 
 .messanger {
   background-color: #f7f7f7;
-  padding-top: 5rem; }
+  padding-bottom: 5rem; }
   .messanger__header {
     display: flex;
     justify-content: center;
-    align-content: center; }
+    align-self: center; }

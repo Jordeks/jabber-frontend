@@ -1,7 +1,15 @@
+a:link {
+    text-decoration: none;
+    float: right; 
+    margin-right: 2rem;
+}
+
+
 .icon {
     height: 2.25rem;
     width: 2.25rem;
     fill: $color-primary;
+    
 
     &--home {
         height: 3rem;
@@ -12,6 +20,12 @@
     &--trash {
         height: .90rem;
         width: .90rem; 
-        fill: $color-white; 
+        fill: $color-primary; 
+    }
+
+    &--edit {
+        height: .90rem;
+        width: .90rem; 
+        fill: $color-primary; 
     }
 }

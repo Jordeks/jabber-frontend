@@ -30,6 +30,7 @@ class MessageContainer extends Component {
             </>
         )
     }
+
 }
 
 const mapStateToProps = state => {
@@ -37,5 +38,6 @@ const mapStateToProps = state => {
         messages: state.messages
     }
 }
+
 
 export default connect(mapStateToProps, { getMessages })(MessageContainer)
