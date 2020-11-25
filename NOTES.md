@@ -6,7 +6,8 @@ FRONTEND
 [X] edit a message
 [X] delete a message
 [X] handle displaying errors in create action creator
-[] handle displaying errors in edit action creator
+[X] handle displaying errors in edit action creator
+[] I'M SORRY JORDLES I BROKE YOUR BEAUTIFUL POPUP PLEASE HALP ME FIX (it no longer closes)
 [] use auth to have a current_user
 [] make message form sticky bottom 
 [] use React library (moments? -- no Luxon? idk) for date formatting
