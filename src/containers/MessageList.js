@@ -3,14 +3,14 @@ import Message from '../components/Message'
 import MessageForm from '../components/MessageForm'
 
 import { connect } from 'react-redux'
-import { addMessage } from '../actions/messages'
+import { addMessage, editMessage } from '../actions/messages'
 
 class MessageList extends React.Component {
-    // console.log(props)
 
     state = {
         username: '',
-        content: ''
+        content: '',
+        id: ''
     }
 
     onChange = e => {
@@ -20,12 +20,15 @@ class MessageList extends React.Component {
 
     onSubmit = e => {
         e.preventDefault()
-        console.log("in onSubmit")
-        this.props.addMessage(this.state)
-        // console.log(this.state)
+        if (this.state.id) {
+            this.props.editMessage(this.state)
+        } else {
+            this.props.addMessage(this.state)
+        }
         this.setState({
             username: '',
-            content: ''
+            content: '',
+            id: ''
         })
     }
 
@@ -39,10 +42,12 @@ class MessageList extends React.Component {
 
     populateForm = (message) => this.setState({
         username: message.username,
-        content: message.content
+        content: message.content,
+        id: message.id
     })
 
     render() {
+        // console.log(this.state)
         return (
             <>
                 <div className='messanger__header'>
@@ -62,4 +67,4 @@ class MessageList extends React.Component {
     }
 }
 
-export default connect(null, { addMessage })(MessageList)
+export default connect(null, { addMessage, editMessage })(MessageList)
