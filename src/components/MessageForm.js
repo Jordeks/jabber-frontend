@@ -1,29 +1,29 @@
 import React, {Component} from 'react'
 
-import { connect } from 'react-redux'
-import { addMessage } from '../actions/messages'
+// import { connect } from 'react-redux'
+// import { addMessage } from '../actions/messages'
 
 class MessageForm extends Component {
 
-    state = {
-        username: '',
-        content: ''
-    }
+    // state = {
+    //     username: '',
+    //     content: ''
+    // }
 
-    handleChange = e => {
-        const { name, value } = e.target
-        this.setState({[name]: value})
-    }
+    // handleChange = e => {
+    //     const { name, value } = e.target
+    //     this.setState({[name]: value})
+    // }
 
-    handleSubmit = e => {
-        e.preventDefault()
-        this.props.addMessage(this.state)
-        // console.log(this.state)
-        this.setState({
-            username: '',
-            content: ''
-        })
-    }
+    // handleSubmit = e => {
+    //     e.preventDefault()
+    //     this.props.addMessage(this.state)
+    //     // console.log(this.state)
+    //     this.setState({
+    //         username: '',
+    //         content: ''
+    //     })
+    // }
 
   render(){
     return(
@@ -31,17 +31,17 @@ class MessageForm extends Component {
         <div className='popup' id="popup">
         <a href="#messanger" className="popup__close">&times;</a>
             <div className='form-container'>
-                <form className='form' onSubmit={this.handleSubmit}>
+                <form className='form' onSubmit={this.props.onSubmit}>
                     <div className='form__group'>
                         <label className='form__label'>
                             Username:
-                            <input className='form__input' type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+                            <input className='form__input' type="text" name="username" value={this.props.username} onChange={this.props.onChange}/>
                         </label><br/>
                     </div>
                     <div className='form__group'>
                         <label className='form__label'>
                             Message:
-                            <input className='form__input' type="text" name="content" value={this.state.content} onChange={this.handleChange}/>
+                            <input className='form__input' type="text" name="content" value={this.props.content} onChange={this.props.onChange}/>
                         </label><br/>
                     </div>
                     <button className='btn btn--small' type="submit" value="Submit"> Send Message</button>
@@ -54,4 +54,5 @@ class MessageForm extends Component {
 
 }
 
-export default connect(null, { addMessage })(MessageForm)
+// export default connect(null, { addMessage })(MessageForm)
+export default MessageForm
