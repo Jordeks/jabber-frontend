@@ -17,7 +17,7 @@ class Message extends Component {
                     <span className='message__username'>{this.props.username}</span> 
                     <p className='message__content'>{this.props.content}
                     <span>
-                        <a href="#popup">
+                        <a href="#popup" onClick={() => this.props.populateForm(this.props)}>
                             <svg className="icon--edit">
                                 <use href={sprite + '#icon-edit'} />
                             </svg>
