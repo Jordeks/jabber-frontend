@@ -1,5 +1,6 @@
 import React from 'react'
 import Message from '../components/Message'
+import MessageForm from '../components/MessageForm'
 
 function MessageList(props){
     // console.log(props)
@@ -16,6 +17,8 @@ function MessageList(props){
                             </ul>
                         </div>
                     </div>
+                    <a href="#popup">New Message</a>
+                <MessageForm />
             </>
         )
     

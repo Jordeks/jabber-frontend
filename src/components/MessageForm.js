@@ -29,7 +29,7 @@ class MessageForm extends Component {
     return(
      <>   
         <div className='popup' id="popup">
-        <a href="#messanger" class="popup__close">&times;</a>
+        <a href="#messanger" className="popup__close">&times;</a>
             <div className='form-container'>
                 <form className='form' onSubmit={this.handleSubmit}>
                     <div className='form__group'>
