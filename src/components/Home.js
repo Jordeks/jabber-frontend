@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 // import { NavLink } from 'react-router-dom';
 
 export default class Home extends Component {
 
-    onClick = () => {
-        this.props.history.push('/messages')
+    onClick = (url) => {
+        this.props.history.push(url)
     }
 
     render() {
         return (
         <>
+            <Link to="/signup" onClick={() => this.onClick('/signup')}>Sign Up</Link> OR <Link to="/login" onClick={() => this.onClick('/login')}>Log In</Link>
             <header className="header">
                 <div className='header__text-box'>
                     <h1 className='heading-primary'>
@@ -19,7 +21,7 @@ export default class Home extends Component {
                 </div>
                 
                 <div className='header__btn'>
-                    <button onClick={this.onClick} className="btn">Try it out now</button>
+                    <button onClick={() => this.onClick('/messages')} className="btn">Try it out now</button>
                 </div>
             </header>
         </>
