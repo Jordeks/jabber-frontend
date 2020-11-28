@@ -8,6 +8,9 @@ FRONTEND
 [X] handle displaying errors in create action creator
 [X] handle displaying errors in edit action creator
 [] I'M SORRY JORDLES I BROKE YOUR BEAUTIFUL POPUP PLEASE HALP ME FIX (it no longer closes)
+  -it closes if the inspect is closed...weird...
+  -might want to add close on submit somehow
+  -why when close #messanger in url??
 [] use auth to have a current_user
 [] make message form sticky bottom 
 [] use React library (moments? -- no Luxon? idk) for date formatting
