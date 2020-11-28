@@ -8,7 +8,6 @@ import { addMessage, editMessage } from '../actions/messages'
 class MessageList extends React.Component {
 
     state = {
-        username: '',
         content: '',
         id: ''
     }
@@ -26,7 +25,6 @@ class MessageList extends React.Component {
             this.props.addMessage(this.state)
         }
         this.setState({
-            username: '',
             content: '',
             id: ''
         })
@@ -34,20 +32,18 @@ class MessageList extends React.Component {
 
     openNewMessageForm = () => {
         this.setState({
-            username: '',
             content: '',
             id: ''
         })
     }
 
     populateForm = (message) => this.setState({
-        username: message.username,
         content: message.content,
         id: message.id
     })
 
     render() {
-        // console.log(this.state)
+        console.log(this.state)
         return (
             <>
                 <div className='messanger__header'>

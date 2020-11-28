@@ -21,6 +21,7 @@ export function getMessages() {
 export function addMessage(messageObj) {
   return (dispatch) => {
     fetch(URL, {
+      credentials: "include",
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
