@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import MessageList from './MessageList'
 // import MessageForm from '../components/MessageForm'
 import { getMessages } from '../actions/messages'
+import { getCurrentUser } from '../actions/currentUser'
 import { connect } from 'react-redux'
 import sprite from '../img/sprite.svg'
 
@@ -9,6 +10,7 @@ class MessageContainer extends Component {
 
     componentDidMount(){
         this.props.getMessages()
+        this.props.getCurrentUser()
     }
 
     onClick = () => {
@@ -43,4 +45,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { getMessages })(MessageContainer)
+export default connect(mapStateToProps, { getMessages, getCurrentUser })(MessageContainer)
