@@ -12,6 +12,16 @@ FRONTEND
   -might want to add close on submit somehow
   -why when close #messanger in url??
 [] use auth to have a current_user
+  [X] login
+  [X] get current user
+  [X] logout
+  [] signup
+[X] new messages uses a current_user
+[] can't edit/delete a message that's not your own
+  []don't show edit or delete buttons on a messages that is not the current user's
+[] when loggedOut clears out redux store of messages (already redirecting to '/')
+
+
 [] make message form sticky bottom 
 [] use React library (moments? -- no Luxon? idk) for date formatting
 [] look into React Mentions so @Meks would actually link to a person (https://github.com/signavio/react-mentions)
@@ -23,4 +33,9 @@ BACKEND
 [X] edit a message
 [X] delete a message
 [] add auth
+  [X] login
+  [X] get current user
+  [X] logout
+  [] signup
+[] can't edit/delete a message that's not your own
 [X] change controllers and routes to /api/v1
