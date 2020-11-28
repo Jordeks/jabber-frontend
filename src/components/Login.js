@@ -25,7 +25,6 @@ onSubmit = e => {
 }
 
   render() {
-    console.log(this.state)
     return (
       <div>
         <form onSubmit={this.onSubmit}>

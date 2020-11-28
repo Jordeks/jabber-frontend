@@ -1,3 +1,6 @@
+import { 
+  SET_CURRENT_USER,
+} from '../actionTypes' 
 
 export function login(credentials, history) {
   return dispatch => {
@@ -10,15 +13,17 @@ export function login(credentials, history) {
       body: JSON.stringify(credentials)
     })
       .then(r => r.json())
-      .then(console.log)
-      // .then(response => {
-      //   if (response.error) {
-      //     alert(response.error)
-      //   } else {
-      //     // dispatch(setCurrentUser(response.data))
-      //     // history.push('/')
-      //   }
-      // })
+      .then(response => {
+        if (response.error) {
+          alert(response.error)
+        } else {
+          dispatch({
+            type: SET_CURRENT_USER, 
+            user: response
+          })
+          history.push('/messages')
+        }
+      })
       .catch(console.log)
   }
 }
