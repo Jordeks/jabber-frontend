@@ -18,6 +18,7 @@ class MessageContainer extends Component {
     render() {
         return (
             <>
+                { this.props.loggedIn ? <><p>Logged in as {this.props.currentUser.username}</p></> : null}
                 <button className='btn btn--icon u-float-left' onClick={this.onClick}>
                     <svg className="icon--home">
                         <use href={sprite + '#icon-home'} />
@@ -35,7 +36,9 @@ class MessageContainer extends Component {
 
 const mapStateToProps = state => {
     return {
-        messages: state.messages
+        messages: state.messages,
+        currentUser: state.currentUser,
+        loggedIn: !!state.currentUser
     }
 }
 
