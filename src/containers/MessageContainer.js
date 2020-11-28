@@ -3,6 +3,7 @@ import MessageList from './MessageList'
 // import MessageForm from '../components/MessageForm'
 import { getMessages } from '../actions/messages'
 import { getCurrentUser } from '../actions/currentUser'
+import Logout from '../components/Logout'
 import { connect } from 'react-redux'
 import sprite from '../img/sprite.svg'
 
@@ -20,7 +21,7 @@ class MessageContainer extends Component {
     render() {
         return (
             <>
-                { this.props.loggedIn ? <><p>Logged in as {this.props.currentUser.username}</p></> : null}
+                { this.props.loggedIn ? <><p>Logged in as {this.props.currentUser.username}</p><Logout/></> : null}
                 <button className='btn btn--icon u-float-left' onClick={this.onClick}>
                     <svg className="icon--home">
                         <use href={sprite + '#icon-home'} />

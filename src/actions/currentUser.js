@@ -1,5 +1,6 @@
 import { 
   SET_CURRENT_USER,
+  CLEAR_CURRENT_USER
 } from '../actionTypes' 
 
 export function login(credentials, history) {
@@ -49,5 +50,15 @@ export function getCurrentUser() {
         }
       })
       .catch(console.log)
+  }
+}
+
+export function logout() {
+  return dispatch => {
+    dispatch({type: CLEAR_CURRENT_USER})
+    return fetch('http://localhost:3000/api/v1/logout', {
+      credentials: "include",
+      method: "DELETE"
+    })
   }
 }
