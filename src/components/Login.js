@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { login } from '../actions/currentUser.js'
 
-export default class Login extends Component {
+
+class Login extends Component {
 
   state = {
     username: '',
@@ -14,12 +17,11 @@ onChange = e => {
 
 onSubmit = e => {
     e.preventDefault()
-    alert('am submitted')
-    // this.props.login(this.state)
-    // this.setState({
-    //     username: '',
-    //     password: ''
-    // })
+    this.props.login(this.state, this.props.history)
+    this.setState({
+        username: '',
+        password: ''
+    })
 }
 
   render() {
@@ -35,3 +37,5 @@ onSubmit = e => {
     )
   }
 }
+
+export default connect(null, { login })(Login)
