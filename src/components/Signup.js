@@ -7,7 +7,10 @@ class Signup extends Component {
 
   state = {
     username: '',
-    password: ''
+    password: '',
+    // passwordConfirmation: '',
+    name: '',
+
 }
 
 onChange = e => {
@@ -20,7 +23,8 @@ onSubmit = e => {
     this.props.signup(this.state, this.props.history)
     this.setState({
         username: '',
-        password: ''
+        password: '',
+        name: '',
     })
 }
 
@@ -30,7 +34,9 @@ onSubmit = e => {
         <form onSubmit={this.onSubmit}>
           <input placeholder="username" value={this.state.username} name="username" type="text" onChange={this.onChange} />
           <input placeholder="password" value={this.state.password} name="password" type="password" onChange={this.onChange} />
-          <input type="submit" value="Log In"/>
+          {/* <input placeholder="password confirmation" value={this.state.passwordConfirmation} name="passwordConfirmation" type="password" onChange={this.onChange} /> */}
+          <input placeholder="name" value={this.state.name} name="name" type="text" onChange={this.onChange} />
+          <input type="submit" value="Signup"/>
         </form>
       </div>
     )
