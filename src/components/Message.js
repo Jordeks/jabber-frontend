@@ -16,20 +16,24 @@ class Message extends Component {
                 <div className='message'>
                     <span className='message__username'>{this.props.username}</span> 
                     <p className='message__content'>{this.props.content}
+                    { this.props.currentUserMessages.map(message => message.id === this.props.id ?
                     <span>
-                        <a href="#popup" onClick={() => this.props.populateForm(this.props)}>
-                            <svg className="icon--edit">
-                                <use href={sprite + '#icon-edit'} />
-                            </svg>
-                        </a>
-                    </span>
-                    <span>
-                        <a href="#"onClick={this.onClick}>
-                            <svg className="icon--trash">
-                                    <use href={sprite + '#icon-trash'} />
-                            </svg>
-                        </a>
-                    </span>
+                     <span>
+                         <a href="#popup" onClick={() => this.props.populateForm(this.props)}>
+                             <svg className="icon--edit">
+                                 <use href={sprite + '#icon-edit'} />
+                             </svg>
+                         </a>
+                     </span>
+                     <span>
+                         <a href="#"onClick={this.onClick}>
+                             <svg className="icon--trash">
+                                 <use href={sprite + '#icon-trash'} />
+                             </svg>
+                         </a>
+                     </span>
+                     </span>
+                    : null )}
                     </p>
                 </div>
             </li>
@@ -39,4 +43,10 @@ class Message extends Component {
     }
 }
 
-export default connect(null, { deleteMessage })(Message)
+const mapStateToProps = state => {
+    return {
+        currentUserMessages: state.currentUser.messages
+    }
+}
+
+export default connect(mapStateToProps, { deleteMessage })(Message)
