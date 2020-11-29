@@ -17,7 +17,9 @@ FRONTEND
   [X] logout
   [X] signup
 [X] new messages uses a current_user
-[] need to add a new message to the user's messages in redux store upon creation (it is succesfully updatin gin the backend cause we see it on refresh)
+[X] need to add a new message to the user's messages in redux store upon creation (it is succesfully updatin gin the backend cause we see it on refresh)
+  [X] update edited message
+  [X] update deleted message
 [X] can't edit/delete a message that's not your own
   [X]don't show edit or delete buttons on a messages that is not the current user's
 [] when loggedOut clears out redux store of messages (already redirecting to '/')

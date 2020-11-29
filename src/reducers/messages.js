@@ -2,7 +2,8 @@ import {
   GET_MESSAGES,
   ADD_MESSAGE,
   EDIT_MESSAGE,
-  DELETE_MESSAGE
+  DELETE_MESSAGE,
+  CLEAR_MESSAGES
 } from '../actionTypes'
 
 const initialState = []
@@ -17,7 +18,9 @@ export function messagesReducer(state = initialState, action) {
       return state.map(message => message.id === action.message.id ? action.message : message)
     case DELETE_MESSAGE: 
       return state.filter(message => message.id !== action.messageId)
-    default:
+    case CLEAR_MESSAGES:
+      return initialState
+      default:
       return state
 
   }

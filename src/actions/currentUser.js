@@ -3,6 +3,8 @@ import {
   CLEAR_CURRENT_USER
 } from '../actionTypes' 
 
+import { clearMessages } from './messages'
+
 export function login(credentials, history) {
   return dispatch => {
     return fetch("http://localhost:3000/api/v1/login", {
@@ -56,6 +58,7 @@ export function getCurrentUser() {
 export function logout() {
   return dispatch => {
     dispatch({type: CLEAR_CURRENT_USER})
+    dispatch(clearMessages())
     return fetch('http://localhost:3000/api/v1/logout', {
       credentials: "include",
       method: "DELETE"

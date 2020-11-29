@@ -2,12 +2,19 @@ import {
   GET_MESSAGES,
   ADD_MESSAGE,
   EDIT_MESSAGE,
-  DELETE_MESSAGE
+  DELETE_MESSAGE, 
+  CLEAR_MESSAGES
 } from '../actionTypes' 
 
 import { getCurrentUser } from './currentUser'
 
 const URL = 'http://localhost:3000/api/v1/messages'
+
+export function clearMessages() {
+  return {
+    type: CLEAR_MESSAGES
+  }
+}
 
 export function getMessages() {
   return (dispatch) => {
