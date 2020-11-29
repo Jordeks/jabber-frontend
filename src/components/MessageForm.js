@@ -5,7 +5,7 @@ class MessageForm extends Component {
   render(){
     return(
      <>   
-        <div className='popup' id="popup">
+        <div className='popup' id="popup" visibility={this.props.visibility}>
         <a href="#messanger" className="popup__close">&times;</a>
             <div className='form-container'>
                 <form className='form' onSubmit={this.props.onSubmit}>

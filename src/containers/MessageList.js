@@ -9,7 +9,8 @@ class MessageList extends React.Component {
 
     state = {
         content: '',
-        id: ''
+        id: '', 
+        visibility: 'hidden'
     }
 
     onChange = e => {
@@ -26,14 +27,16 @@ class MessageList extends React.Component {
         }
         this.setState({
             content: '',
-            id: ''
+            id: '',
+            visibility: 'hidden'
         })
     }
 
     openNewMessageForm = () => {
         this.setState({
             content: '',
-            id: ''
+            id: '',
+            visibility: 'visible', 
         })
     }
 

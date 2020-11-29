@@ -28,4 +28,20 @@ a:link {
         width: .90rem; 
         fill: $color-primary; 
     }
+
+    &--login {
+        margin-top: .5rem; 
+        margin-right: .25rem;
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: $color-primary;
+    }
+
+    &--signup {
+        margin-top: .5rem; 
+        margin-right: .45rem;
+        height: 2rem;
+        width: 2rem;
+        fill: $color-primary;
+    }
 }

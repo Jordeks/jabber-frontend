@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-// import { NavLink } from 'react-router-dom';
-import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import sprite from '../img/sprite.svg'
 
 class Home extends Component {
 
@@ -12,7 +12,24 @@ class Home extends Component {
     render() {
         return (
         <>
-            <Link to="/signup" onClick={() => this.onClick('/signup')}>Sign Up</Link> OR <Link to="/login" onClick={() => this.onClick('/login')}>Log In</Link>
+            <nav className='nav'>
+            <navlink className='nav__link-box'>
+                    <span>
+                            <svg className="icon--signup">
+                                <use href={sprite + '#icon-add-user'} />
+                            </svg>
+                    </span>
+                <NavLink to="/signup" className="nav__link" onClick={() => this.onClick('/signup')}>Sign Up</NavLink>  
+            </navlink>
+                <navlink className='nav__link-box'>
+                    <span>
+                            <svg className="icon--login">
+                                <use href={sprite + '#icon-lock-open'} />
+                            </svg>
+                    </span>
+                    <NavLink to="/login" className="nav__link" onClick={() => this.onClick('/login')}>Log In</NavLink>
+                </navlink>
+            </nav>
             <header className="header">
                 <div className='header__text-box'>
                     <h1 className='heading-primary'>

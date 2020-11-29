@@ -225,6 +225,18 @@ a:link {
     height: .90rem;
     width: .90rem;
     fill: #449c75; }
+  .icon--login {
+    margin-top: .5rem;
+    margin-right: .25rem;
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: #449c75; }
+  .icon--signup {
+    margin-top: .5rem;
+    margin-right: .45rem;
+    height: 2rem;
+    width: 2rem;
+    fill: #449c75; }
 
 .message {
   font-size: 1.25rem;
@@ -341,6 +353,22 @@ a:link {
     position: absolute;
     top: 80%;
     right: 10%; }
+
+.nav {
+  display: flex;
+  margin: 1rem;
+  align-content: center;
+  justify-content: flex-end; }
+  .nav__link-box {
+    display: flex;
+    align-content: center; }
+  .nav__link {
+    border-radius: 5rem;
+    padding: .5rem;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: #426276; }
 
 .messanger {
   background-color: #f7f7f7;
