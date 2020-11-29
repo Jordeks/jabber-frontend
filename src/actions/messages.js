@@ -5,6 +5,8 @@ import {
   DELETE_MESSAGE
 } from '../actionTypes' 
 
+import { getCurrentUser } from './currentUser'
+
 const URL = 'http://localhost:3000/api/v1/messages'
 
 export function getMessages() {
@@ -37,6 +39,7 @@ export function addMessage(messageObj) {
           type: ADD_MESSAGE, 
           message
         })
+        dispatch(getCurrentUser())
       }
     })
     .catch((error) => {
@@ -63,6 +66,7 @@ export function editMessage(messageObj) {
           type: EDIT_MESSAGE, 
           message
         })
+        dispatch(getCurrentUser())
       }
     })
     .catch((error) => {
@@ -73,6 +77,7 @@ export function editMessage(messageObj) {
 
 export function deleteMessage(messageId) {
   return (dispatch) => {
+    dispatch(getCurrentUser())
     fetch(`${URL}/${messageId}`, {
       method: 'DELETE',
     })
@@ -80,6 +85,7 @@ export function deleteMessage(messageId) {
     .then(() => dispatch({
       type: DELETE_MESSAGE,
       messageId
-    }))
+    })
+    )
   }
 }
