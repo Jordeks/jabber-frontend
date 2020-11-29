@@ -11,12 +11,13 @@ FRONTEND
   -it closes if the inspect is closed...weird...
   -might want to add close on submit somehow
   -why when close #messanger in url??
-[] use auth to have a current_user
+[X] use auth to have a current_user
   [X] login
   [X] get current user
   [X] logout
-  [] signup
+  [X] signup
 [X] new messages uses a current_user
+[] need to add a new message to the user's messages in redux store upon creation (it is succesfully updatin gin the backend cause we see it on refresh)
 [] can't edit/delete a message that's not your own
   []don't show edit or delete buttons on a messages that is not the current user's
 [] when loggedOut clears out redux store of messages (already redirecting to '/')
@@ -34,10 +35,10 @@ BACKEND
 [X] which means we need to add some validations
 [X] edit a message
 [X] delete a message
-[] add auth
+[X] add auth
   [X] login
   [X] get current user
   [X] logout
-  [] signup
+  [X] signup
 [] can't edit/delete a message that's not your own
 [X] change controllers and routes to /api/v1
