@@ -24,6 +24,10 @@ FRONTEND
   [X]don't show edit or delete buttons on a messages that is not the current user's
 [X] when loggedOut clears out redux store of messages (already redirecting to '/')
 [X] 'try it out now button' has an if conditional that shows the messages if logged, else shows login/signup
+
+[] Message.js we're getting a key error, where to put it?? (Nicky at OOH)
+[] if a user is NOT logged in and types /messages in the url all hell breaks loose, (46 console errors, app tries to find a current user[dumby])
+
 [] login/signup/rootPath toggle or navBar
  
 
