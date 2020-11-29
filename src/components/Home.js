@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 // import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux'
 
-export default class Home extends Component {
+class Home extends Component {
 
     onClick = (url) => {
         this.props.history.push(url)
@@ -21,10 +22,22 @@ export default class Home extends Component {
                 </div>
                 
                 <div className='header__btn'>
+                    { this.props.loggedIn ? 
                     <button onClick={() => this.onClick('/messages')} className="btn">Try it out now</button>
-                </div>
+                     :
+                     <button onClick={() => this.onClick('/login')} className="btn">Login</button>
+                    }
+                    </div>
             </header>
         </>
         )
     }
 }
+
+const mapStateToProps = state => {
+    return({
+        loggedIn: !!state.currentUser
+    })
+}
+
+export default connect(mapStateToProps)(Home)

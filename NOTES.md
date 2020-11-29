@@ -22,8 +22,8 @@ FRONTEND
   [X] update deleted message
 [X] can't edit/delete a message that's not your own
   [X]don't show edit or delete buttons on a messages that is not the current user's
-[] when loggedOut clears out redux store of messages (already redirecting to '/')
-[] 'try it out now button' has an if conditional that shows the messages if logged, else shows login/signup
+[X] when loggedOut clears out redux store of messages (already redirecting to '/')
+[X] 'try it out now button' has an if conditional that shows the messages if logged, else shows login/signup
 [] login/signup/rootPath toggle or navBar
  
 
