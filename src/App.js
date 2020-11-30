@@ -1,24 +1,38 @@
+import React from 'react'
 import MessageContainer from './containers/MessageContainer'
 import Home from './components/Home'
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import { useHistory } from 'react-router';
+import { Route } from 'react-router-dom';
+// import { useHistory } from 'react-router';
 import Login from './components/Login.js'
 import Signup from './components/Signup'
 
+import { connect } from 'react-redux'
 
 
-function App() {
-  const history = useHistory();
-  return (
-    <div className='App'>
-      <Router>
-        <Route exact path='/login' component={Login} history={history}/>
-        <Route exact path='/signup' component={Signup} history={history}/>
-        <Route exact path="/" component={Home} history={history}/>
-        <Route exact path="/messages" component={MessageContainer} history={history} />
-      </Router>
-    </div>
-  );
+
+
+class App extends React.Component {
+
+  render(){
+    return (
+      <div className='App'>
+          <Route exact path='/login' component={Login} history={this.props.history}/>
+          <Route exact path='/signup' component={Signup} history={this.props.history}/>
+          <Route exact path="/" component={Home} history={this.props.history}/>
+          { this.props.loggedIn ? 
+          <Route exact path="/messages" component={MessageContainer} history={this.props.history} />
+          :
+          <Route exact path='/login' component={Login} history={this.props.history}/>
+          }
+          </div>
+    );
+  }
+}
+//not redirecting, the falsy case needs to get the component or look into using the private route!!
+const mapStateToProps = state => {
+  return ({
+    loggedIn: !!state.currentUser,
+  })
 }
 
-export default App;
+export default connect(mapStateToProps)(App)
