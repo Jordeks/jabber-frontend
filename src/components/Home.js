@@ -13,22 +13,22 @@ class Home extends Component {
         return (
         <>
             <nav className='nav'>
-            <navlink className='nav__link-box'>
+            <div className='nav__link-box'>
                     <span>
                             <svg className="icon--signup">
                                 <use href={sprite + '#icon-add-user'} />
                             </svg>
                     </span>
                 <NavLink to="/signup" className="nav__link" onClick={() => this.onClick('/signup')}>Sign Up</NavLink>  
-            </navlink>
-                <navlink className='nav__link-box'>
+            </div>
+                <div className='nav__link-box'>
                     <span>
                             <svg className="icon--login">
                                 <use href={sprite + '#icon-lock-open'} />
                             </svg>
                     </span>
                     <NavLink to="/login" className="nav__link" onClick={() => this.onClick('/login')}>Log In</NavLink>
-                </navlink>
+                </div>
             </nav>
             <header className="header">
                 <div className='header__text-box'>
