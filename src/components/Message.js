@@ -10,7 +10,6 @@ class Message extends Component {
     }
  
     render() {
-        console.log("Hello GIDEON")
         return (
             <>
             <li className='message-list__li'>
@@ -45,7 +44,7 @@ class Message extends Component {
         )
     }
 }
-
+//suggestion from Nicky, render the edit and delete icons in their own component since we're doing a map.
 const mapStateToProps = state => {
     return {
         currentUserMessages: state.currentUser.messages

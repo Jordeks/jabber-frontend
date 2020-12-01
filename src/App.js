@@ -22,13 +22,17 @@ class App extends React.Component {
           { this.props.loggedIn ? 
           <Route exact path="/messages" component={MessageContainer} history={this.props.history} />
           :
-          <Route exact path='/login' component={Login} history={this.props.history}/>
+          // <Login history={this.props.history}/>
+          <p>Sorry, you must be logged in to see the messages. Please go back to the homepage and login.</p>
           }
           </div>
     );
   }
 }
 //not redirecting, the falsy case needs to get the component or look into using the private route!!
+//when render component directly it doesn't change the route name lol
+//plus now we're getting a double rendering of the Login component doh! why is this so blasted hard?!
+//so it's working now, however probably best to look into PrivateRoute
 const mapStateToProps = state => {
   return ({
     loggedIn: !!state.currentUser,
