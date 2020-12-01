@@ -8,9 +8,6 @@ import Signup from './components/Signup'
 
 import { connect } from 'react-redux'
 
-
-
-
 class App extends React.Component {
 
   render(){

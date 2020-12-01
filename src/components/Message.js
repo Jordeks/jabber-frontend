@@ -17,7 +17,7 @@ class Message extends Component {
                     <span className='message__username'>{this.props.username}</span> 
                     <p className='message__content'>{this.props.content}
                     { this.props.currentUserMessages.map(message => message.id === this.props.id ?
-                    <div key={message.id} >
+                    <div key={message.id}>
                         <span>
                         <span>
                             <a href="#popup" onClick={() => this.props.populateForm(this.props)}>
